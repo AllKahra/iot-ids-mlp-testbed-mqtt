@@ -1,0 +1,38 @@
+========== RESULTADO TESTE CEGO V3 ==========
+Accuracy: 0.9948
+Precision weighted: 0.9950
+Recall weighted: 0.9948
+F1 weighted: 0.9949
+Precision macro: 0.9883
+Recall macro: 0.9863
+F1 macro: 0.9872
+Menor recall por classe: 0.9565
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.9565
+- c2_beacon: 1.0000
+- dos_flood: 0.9630
+- mqtt_abuse: 0.9844
+- scan: 1.0000
+- slow_dos: 1.0000
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        51
+  bruteforce       1.00      0.96      0.98        23
+   c2_beacon       1.00      1.00      1.00       110
+   dos_flood       0.93      0.96      0.95        27
+  mqtt_abuse       1.00      0.98      0.99        64
+        scan       1.00      1.00      1.00       210
+    slow_dos       0.99      1.00      0.99        95
+
+    accuracy                           0.99       580
+   macro avg       0.99      0.99      0.99       580
+weighted avg       0.99      0.99      0.99       580
+
+
+========== GATE TESTE CEGO ==========
+- Nenhum problema crítico.
+STATUS: APROVADO NO TESTE CEGO.

@@ -1,0 +1,71 @@
+========== AVALIAÇÃO CEGA V3 ==========
+[REGRA] Este script NÃO treina modelo.
+[REGRA] Ele apenas carrega modelo treinado e testa nova rodada cega.
+[INFO] CSVs encontrados: 7
+[INFO] benign_13.csv -> benign | linhas: 51
+[INFO] bruteforce_13.csv -> bruteforce | linhas: 23
+[INFO] c2_13.csv -> c2_beacon | linhas: 110
+[INFO] flood_13.csv -> dos_flood | linhas: 27
+[INFO] mqtt_abuse_13.csv -> mqtt_abuse | linhas: 64
+[INFO] scan_13.csv -> scan | linhas: 210
+[INFO] slow_dos_13.csv -> slow_dos | linhas: 95
+
+[INFO] Shape blind:
+(580, 87)
+
+[INFO] Distribuição por classe:
+Attack_Type
+benign         51
+bruteforce     23
+c2_beacon     110
+dos_flood      27
+mqtt_abuse     64
+scan          210
+slow_dos       95
+Name: count, dtype: int64
+========== RESULTADO TESTE CEGO V3 ==========
+Accuracy: 0.9948
+Precision weighted: 0.9950
+Recall weighted: 0.9948
+F1 weighted: 0.9949
+Precision macro: 0.9883
+Recall macro: 0.9863
+F1 macro: 0.9872
+Menor recall por classe: 0.9565
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.9565
+- c2_beacon: 1.0000
+- dos_flood: 0.9630
+- mqtt_abuse: 0.9844
+- scan: 1.0000
+- slow_dos: 1.0000
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        51
+  bruteforce       1.00      0.96      0.98        23
+   c2_beacon       1.00      1.00      1.00       110
+   dos_flood       0.93      0.96      0.95        27
+  mqtt_abuse       1.00      0.98      0.99        64
+        scan       1.00      1.00      1.00       210
+    slow_dos       0.99      1.00      0.99        95
+
+    accuracy                           0.99       580
+   macro avg       0.99      0.99      0.99       580
+weighted avg       0.99      0.99      0.99       580
+
+
+========== GATE TESTE CEGO ==========
+- Nenhum problema crítico.
+STATUS: APROVADO NO TESTE CEGO.
+
+[OK] Arquivos gerados em: results/blind13_v4
+ - results/blind13_v4/confusion_matrix_blind_v3.png
+ - results/blind13_v4/dataset_blind09_labeled.csv
+ - results/blind13_v4/log_blind13_v4.txt
+ - results/blind13_v4/metrics_blind_v3.txt
+ - results/blind13_v4/predictions_blind_v3.csv
+ - results/blind13_v4/recall_por_classe_blind_v3.csv
