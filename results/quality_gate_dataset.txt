@@ -1,0 +1,29 @@
+========== GATE DE QUALIDADE DO DATASET ==========
+
+Distribuição treino:
+Attack_Type
+benign          43
+bruteforce      95
+c2_beacon       55
+dos_flood     1000
+mqtt_abuse     240
+scan           108
+slow_dos       115
+
+Distribuição teste:
+Attack_Type
+benign         37
+bruteforce     35
+c2_beacon      20
+dos_flood     320
+mqtt_abuse     70
+scan           36
+slow_dos       50
+
+Problemas críticos:
+- Nenhum problema crítico.
+
+Alertas:
+- benign: treino com 43 fluxos. Ideal: 50 ou mais.
+
+STATUS: APROVADO PARA TREINAMENTO INICIAL.

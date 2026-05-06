@@ -1,0 +1,4 @@
+filename,usage,label,attack_type
+c2_06.pcap,train_v3,1,c2_beacon
+c2_07.pcap,train_v3,1,c2_beacon
+c2_08.pcap,train_v3,1,c2_beacon

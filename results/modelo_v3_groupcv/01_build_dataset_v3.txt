@@ -1,0 +1,76 @@
+========== BUILD DATASET V3 — REFORÇO C2 ==========
+[INFO] Dataset base V2: (2861, 88)
+[INFO] Distribuição base:
+Attack_Type
+benign         134
+bruteforce     171
+c2_beacon      115
+dos_flood     1404
+mqtt_abuse     439
+scan           294
+slow_dos       304
+Name: count, dtype: int64
+
+[INFO] CSVs reforço C2 encontrados: 3
+[INFO] c2_06.csv -> c2_beacon | linhas: 120
+[INFO] c2_07.csv -> c2_beacon | linhas: 100
+[INFO] c2_08.csv -> c2_beacon | linhas: 77
+
+[INFO] Linhas removidas por ausência total de features: 0
+[OK] Nenhuma feature proibida na versão oficial.
+
+========== DISTRIBUIÇÃO FINAL V3 ==========
+Attack_Type
+benign         134
+bruteforce     171
+c2_beacon      412
+dos_flood     1404
+mqtt_abuse     439
+scan           294
+slow_dos       304
+Name: count, dtype: int64
+
+========== DISTRIBUIÇÃO POR RODADA ==========
+round_id  Attack_Type
+01        benign          12
+          bruteforce      20
+          c2_beacon       20
+          dos_flood      250
+          mqtt_abuse      60
+          scan            36
+          slow_dos        30
+02        benign          22
+          bruteforce      50
+          c2_beacon       15
+          dos_flood      350
+          mqtt_abuse      80
+          scan            36
+          slow_dos        45
+03        benign           9
+          bruteforce      25
+          c2_beacon       20
+          dos_flood      400
+          mqtt_abuse     100
+          scan            36
+          slow_dos        40
+04        benign          37
+          bruteforce      35
+          c2_beacon       20
+          dos_flood      320
+          mqtt_abuse      70
+          scan            36
+          slow_dos        50
+05        benign          54
+          bruteforce      41
+          c2_beacon       40
+          dos_flood       84
+          mqtt_abuse     129
+          scan           150
+          slow_dos       139
+06        c2_beacon      120
+07        c2_beacon      100
+08        c2_beacon       77
+
+[OK] Dataset V3 gerado:
+ - cicflowmeter/processed_csv_v3/dataset_rodadas_01_08_c2reforco.csv
+ - cicflowmeter/processed_csv_v3/feature_columns_no_ports_v3.txt

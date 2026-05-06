@@ -1,0 +1,22 @@
+========== GATE MODELO V2 — GROUP CV POR RODADA ==========
+Melhor modelo: rf_regularizado_depth6_leaf10
+Accuracy GroupCV: 0.8336
+F1 macro GroupCV: 0.8478
+F1 weighted GroupCV: 0.8479
+Menor recall por classe: 0.6522
+Gap médio treino-validação: 0.1414
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.7602
+- c2_beacon: 0.6522
+- dos_flood: 0.7621
+- mqtt_abuse: 0.9954
+- scan: 1.0000
+- slow_dos: 0.8059
+
+Problemas:
+- Há classe com recall abaixo de 70% na validação por rodada.
+
+STATUS: AINDA NÃO LIBERADO PARA RESULTADO FINAL.
+Ação: gerar mais variações das classes com menor recall e treinar novamente.

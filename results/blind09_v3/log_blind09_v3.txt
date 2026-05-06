@@ -1,0 +1,73 @@
+========== AVALIAÇÃO CEGA V3 ==========
+[REGRA] Este script NÃO treina modelo.
+[REGRA] Ele apenas carrega modelo treinado e testa nova rodada cega.
+[INFO] CSVs encontrados: 7
+[INFO] benign_09.csv -> benign | linhas: 52
+[INFO] bruteforce_09.csv -> bruteforce | linhas: 120
+[INFO] c2_09.csv -> c2_beacon | linhas: 95
+[INFO] flood_09.csv -> dos_flood | linhas: 383
+[INFO] mqtt_abuse_09.csv -> mqtt_abuse | linhas: 144
+[INFO] scan_09.csv -> scan | linhas: 180
+[INFO] slow_dos_09.csv -> slow_dos | linhas: 110
+
+[INFO] Shape blind:
+(1084, 87)
+
+[INFO] Distribuição por classe:
+Attack_Type
+benign         52
+bruteforce    120
+c2_beacon      95
+dos_flood     383
+mqtt_abuse    144
+scan          180
+slow_dos      110
+Name: count, dtype: int64
+========== RESULTADO TESTE CEGO V3 ==========
+Accuracy: 0.5969
+Precision weighted: 0.4877
+Recall weighted: 0.5969
+F1 weighted: 0.5187
+Precision macro: 0.6619
+Recall macro: 0.7996
+F1 macro: 0.6999
+Menor recall por classe: 0.0000
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 1.0000
+- c2_beacon: 1.0000
+- dos_flood: 0.0000
+- mqtt_abuse: 0.7153
+- scan: 1.0000
+- slow_dos: 0.8818
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        52
+  bruteforce       1.00      1.00      1.00       120
+   c2_beacon       1.00      1.00      1.00        95
+   dos_flood       0.00      0.00      0.00       383
+  mqtt_abuse       0.38      0.72      0.49       144
+        scan       0.99      1.00      0.99       180
+    slow_dos       0.27      0.88      0.41       110
+
+    accuracy                           0.60      1084
+   macro avg       0.66      0.80      0.70      1084
+weighted avg       0.49      0.60      0.52      1084
+
+
+========== GATE TESTE CEGO ==========
+- Há classe abaixo de 70% no teste cego.
+- F1 macro abaixo de 70%.
+STATUS: REPROVADO NO TESTE CEGO.
+Ação: esta rodada deve virar dado de treino/validação, e uma nova rodada cega deve ser criada.
+
+[OK] Arquivos gerados em: results/blind09_v3
+ - results/blind09_v3/confusion_matrix_blind_v3.png
+ - results/blind09_v3/dataset_blind09_labeled.csv
+ - results/blind09_v3/log_blind09_v3.txt
+ - results/blind09_v3/metrics_blind_v3.txt
+ - results/blind09_v3/predictions_blind_v3.csv
+ - results/blind09_v3/recall_por_classe_blind_v3.csv

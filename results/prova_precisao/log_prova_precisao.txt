@@ -1,0 +1,144 @@
+========== PROVA DE PRECISÃO — RANDOM FOREST ==========
+[INFO] Linhas treino: 1656
+[INFO] Linhas teste: 568
+[INFO] Features sem portas: 77
+[INFO] Features com portas: 79
+
+========== RF multiclasse sem portas ==========
+              experimento      target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+RF multiclasse sem portas Attack_Type        77             1.0            1.0                 1.0              1.0          1.0              1.0           1.0       1.0             0.0
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        37
+  bruteforce       1.00      1.00      1.00        35
+   c2_beacon       1.00      1.00      1.00        20
+   dos_flood       1.00      1.00      1.00       320
+  mqtt_abuse       1.00      1.00      1.00        70
+        scan       1.00      1.00      1.00        36
+    slow_dos       1.00      1.00      1.00        50
+
+    accuracy                           1.00       568
+   macro avg       1.00      1.00      1.00       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== RF binario sem portas ==========
+          experimento target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+RF binario sem portas  Label        77             1.0       0.998239            0.998243         0.998239     0.998228          0.99906      0.986486   0.99268        0.001761
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+           0       1.00      0.97      0.99        37
+           1       1.00      1.00      1.00       531
+
+    accuracy                           1.00       568
+   macro avg       1.00      0.99      0.99       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== RF multiclasse com portas ==========
+              experimento      target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+RF multiclasse com portas Attack_Type        79             1.0            1.0                 1.0              1.0          1.0              1.0           1.0       1.0             0.0
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        37
+  bruteforce       1.00      1.00      1.00        35
+   c2_beacon       1.00      1.00      1.00        20
+   dos_flood       1.00      1.00      1.00       320
+  mqtt_abuse       1.00      1.00      1.00        70
+        scan       1.00      1.00      1.00        36
+    slow_dos       1.00      1.00      1.00        50
+
+    accuracy                           1.00       568
+   macro avg       1.00      1.00      1.00       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== RF multiclasse Top 10 atributos ==========
+                    experimento      target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+RF multiclasse Top 10 atributos Attack_Type        10             1.0            1.0                 1.0              1.0          1.0              1.0           1.0       1.0             0.0
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        37
+  bruteforce       1.00      1.00      1.00        35
+   c2_beacon       1.00      1.00      1.00        20
+   dos_flood       1.00      1.00      1.00       320
+  mqtt_abuse       1.00      1.00      1.00        70
+        scan       1.00      1.00      1.00        36
+    slow_dos       1.00      1.00      1.00        50
+
+    accuracy                           1.00       568
+   macro avg       1.00      1.00      1.00       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== RF multiclasse labels embaralhados ==========
+                       experimento      target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+RF multiclasse labels embaralhados Attack_Type        77        0.983092        0.56162            0.385038          0.56162     0.427052         0.259369      0.169891  0.155168        0.421472
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       0.00      0.00      0.00        37
+  bruteforce       0.00      0.00      0.00        35
+   c2_beacon       0.67      0.10      0.17        20
+   dos_flood       0.58      0.98      0.73       320
+  mqtt_abuse       0.00      0.00      0.00        70
+        scan       0.57      0.11      0.19        36
+    slow_dos       0.00      0.00      0.00        50
+
+    accuracy                           0.56       568
+   macro avg       0.26      0.17      0.16       568
+weighted avg       0.39      0.56      0.43       568
+
+
+========== TABELA COMPARATIVA FINAL ==========
+                       experimento      target  features  accuracy_train  accuracy_test  precision_weighted  recall_weighted  f1_weighted  precision_macro  recall_macro  f1_macro  gap_train_test
+         RF multiclasse sem portas Attack_Type        77        1.000000       1.000000            1.000000         1.000000     1.000000         1.000000      1.000000  1.000000        0.000000
+             RF binario sem portas       Label        77        1.000000       0.998239            0.998243         0.998239     0.998228         0.999060      0.986486  0.992680        0.001761
+         RF multiclasse com portas Attack_Type        79        1.000000       1.000000            1.000000         1.000000     1.000000         1.000000      1.000000  1.000000        0.000000
+   RF multiclasse Top 10 atributos Attack_Type        10        1.000000       1.000000            1.000000         1.000000     1.000000         1.000000      1.000000  1.000000        0.000000
+RF multiclasse labels embaralhados Attack_Type        77        0.983092       0.561620            0.385038         0.561620     0.427052         0.259369      0.169891  0.155168        0.421472
+
+[OK] Arquivos gerados em: results/prova_precisao
+ - results/prova_precisao/comparacao_prova_precisao.csv
+ - results/prova_precisao/log_prova_precisao.txt
+ - results/prova_precisao/resumo_prova_precisao.md
+ - results/prova_precisao/rf_binario_sem_portas_confusion_matrix.png
+ - results/prova_precisao/rf_binario_sem_portas_feature_importance.csv
+ - results/prova_precisao/rf_binario_sem_portas_feature_importance.png
+ - results/prova_precisao/rf_binario_sem_portas_model.pkl
+ - results/prova_precisao/rf_binario_sem_portas_predictions.csv
+ - results/prova_precisao/rf_binario_sem_portas_report.txt
+ - results/prova_precisao/rf_multiclasse_com_portas_confusion_matrix.png
+ - results/prova_precisao/rf_multiclasse_com_portas_feature_importance.csv
+ - results/prova_precisao/rf_multiclasse_com_portas_feature_importance.png
+ - results/prova_precisao/rf_multiclasse_com_portas_model.pkl
+ - results/prova_precisao/rf_multiclasse_com_portas_predictions.csv
+ - results/prova_precisao/rf_multiclasse_com_portas_report.txt
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_confusion_matrix.png
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_feature_importance.csv
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_feature_importance.png
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_model.pkl
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_predictions.csv
+ - results/prova_precisao/rf_multiclasse_labels_embaralhados_report.txt
+ - results/prova_precisao/rf_multiclasse_sem_portas_confusion_matrix.png
+ - results/prova_precisao/rf_multiclasse_sem_portas_feature_importance.csv
+ - results/prova_precisao/rf_multiclasse_sem_portas_feature_importance.png
+ - results/prova_precisao/rf_multiclasse_sem_portas_model.pkl
+ - results/prova_precisao/rf_multiclasse_sem_portas_predictions.csv
+ - results/prova_precisao/rf_multiclasse_sem_portas_report.txt
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_confusion_matrix.png
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_feature_importance.csv
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_feature_importance.png
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_model.pkl
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_predictions.csv
+ - results/prova_precisao/rf_multiclasse_top_10_atributos_report.txt
+ - results/prova_precisao/top10_features.txt

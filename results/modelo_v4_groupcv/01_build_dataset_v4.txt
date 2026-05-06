@@ -1,0 +1,94 @@
+========== BUILD DATASET V4 — BLIND09 + REFORÇO FLOOD ==========
+[INFO] Base V3:
+Attack_Type
+benign         134
+bruteforce     171
+c2_beacon      412
+dos_flood     1404
+mqtt_abuse     439
+scan           294
+slow_dos       304
+Name: count, dtype: int64
+
+[INFO] Blind09:
+Attack_Type
+benign         52
+bruteforce    120
+c2_beacon      95
+dos_flood     383
+mqtt_abuse    144
+scan          180
+slow_dos      110
+Name: count, dtype: int64
+[INFO] Reforço flood: flood_10.csv -> 37 linhas
+[INFO] Reforço flood: flood_11.csv -> 71 linhas
+[INFO] Reforço flood: flood_12.csv -> 106 linhas
+
+[INFO] Linhas removidas sem features: 0
+[OK] Sem features proibidas.
+
+========== DISTRIBUIÇÃO FINAL V4 ==========
+Attack_Type
+benign         186
+bruteforce     291
+c2_beacon      507
+dos_flood     2001
+mqtt_abuse     583
+scan           474
+slow_dos       414
+Name: count, dtype: int64
+
+========== DISTRIBUIÇÃO POR RODADA ==========
+round_id  Attack_Type
+01        benign          12
+          bruteforce      20
+          c2_beacon       20
+          dos_flood      250
+          mqtt_abuse      60
+          scan            36
+          slow_dos        30
+02        benign          22
+          bruteforce      50
+          c2_beacon       15
+          dos_flood      350
+          mqtt_abuse      80
+          scan            36
+          slow_dos        45
+03        benign           9
+          bruteforce      25
+          c2_beacon       20
+          dos_flood      400
+          mqtt_abuse     100
+          scan            36
+          slow_dos        40
+04        benign          37
+          bruteforce      35
+          c2_beacon       20
+          dos_flood      320
+          mqtt_abuse      70
+          scan            36
+          slow_dos        50
+05        benign          54
+          bruteforce      41
+          c2_beacon       40
+          dos_flood       84
+          mqtt_abuse     129
+          scan           150
+          slow_dos       139
+06        c2_beacon      120
+07        c2_beacon      100
+08        c2_beacon       77
+09        benign          52
+          bruteforce     120
+          c2_beacon       95
+          dos_flood      383
+          mqtt_abuse     144
+          scan           180
+          slow_dos       110
+10        dos_flood       37
+11        dos_flood       71
+12        dos_flood      106
+
+[OK] Dataset V4 gerado:
+cicflowmeter/processed_csv_v4/dataset_v4_rodadas_01_12.csv
+cicflowmeter/processed_csv_v4/feature_columns_no_ports_v4.txt

@@ -1,0 +1,33 @@
+========== GATE DE QUALIDADE DO DATASET ==========
+
+Distribuição treino:
+Attack_Type
+benign         43
+bruteforce     95
+c2_beacon      55
+dos_flood     450
+mqtt_abuse      3
+scan          108
+slow_dos       14
+
+Distribuição teste:
+Attack_Type
+benign         37
+bruteforce     35
+c2_beacon      20
+dos_flood     120
+mqtt_abuse      1
+scan           36
+slow_dos        4
+
+Problemas críticos:
+- mqtt_abuse: treino com apenas 3 fluxos. Mínimo crítico recomendado: 20.
+- mqtt_abuse: teste com apenas 1 fluxos. Mínimo crítico recomendado: 5.
+- slow_dos: treino com apenas 14 fluxos. Mínimo crítico recomendado: 20.
+- slow_dos: teste com apenas 4 fluxos. Mínimo crítico recomendado: 5.
+
+Alertas:
+- benign: treino com 43 fluxos. Ideal: 50 ou mais.
+
+STATUS: REPROVADO PARA RESULTADO FINAL APRESENTÁVEL.
+Ação: gere mais tráfego/PCAPs para as classes com poucos fluxos antes de considerar o modelo final.

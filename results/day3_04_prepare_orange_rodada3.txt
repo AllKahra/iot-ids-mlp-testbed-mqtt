@@ -1,0 +1,12 @@
+========== PREPARANDO ARQUIVOS DA RODADA 3 PARA ORANGE ==========
+[INFO] Features sem portas: 77
+[INFO] Top 10 atributos disponíveis: 10
+
+[OK] Arquivos gerados:
+ - orange/rodada3_binary_test_no_ports.csv | 325066 bytes
+ - orange/rodada3_binary_train_no_ports.csv | 968222 bytes
+ - orange/rodada3_multiclass_test_no_ports.csv | 319484 bytes
+ - orange/rodada3_multiclass_test_top10.csv | 79707 bytes
+ - orange/rodada3_multiclass_train_no_ports.csv | 951778 bytes
+ - orange/rodada3_multiclass_train_top10.csv | 251902 bytes
+ - orange/README_ORANGE_RODADA3.md

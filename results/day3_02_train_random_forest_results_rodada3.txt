@@ -1,0 +1,106 @@
+========== TREINAMENTO RANDOM FOREST — DIA 3 ==========
+[INFO] Features sem portas: 77
+[INFO] Features com portas: 79
+
+========== RESULTADO OFICIAL 1 — RF MULTICLASSE SEM PORTAS ==========
+========== RESULTADO OFICIAL 1 — RANDOM FOREST MULTICLASSE SEM PORTAS ==========
+Features: 77
+Accuracy treino: 1.0000
+Accuracy teste:  1.0000
+Precision weighted: 1.0000
+Recall weighted:    1.0000
+F1 weighted:        1.0000
+Precision macro:    1.0000
+Recall macro:       1.0000
+F1 macro:           1.0000
+Gap treino-teste:   0.0000
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        37
+  bruteforce       1.00      1.00      1.00        35
+   c2_beacon       1.00      1.00      1.00        20
+   dos_flood       1.00      1.00      1.00       320
+  mqtt_abuse       1.00      1.00      1.00        70
+        scan       1.00      1.00      1.00        36
+    slow_dos       1.00      1.00      1.00        50
+
+    accuracy                           1.00       568
+   macro avg       1.00      1.00      1.00       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== RESULTADO OFICIAL 2 — RF BINÁRIO SEM PORTAS ==========
+========== RESULTADO OFICIAL 2 — RANDOM FOREST BINÁRIO SEM PORTAS ==========
+Features: 77
+Accuracy treino: 1.0000
+Accuracy teste:  0.9982
+Precision weighted: 0.9982
+Recall weighted:    0.9982
+F1 weighted:        0.9982
+F1 macro:           0.9927
+Gap treino-teste:   0.0018
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      0.97      0.99        37
+   malicious       1.00      1.00      1.00       531
+
+    accuracy                           1.00       568
+   macro avg       1.00      0.99      0.99       568
+weighted avg       1.00      1.00      1.00       568
+
+
+========== COMPARAÇÃO — RF MULTICLASSE COM PORTAS VS SEM PORTAS ==========
+========== COMPARAÇÃO RF MULTICLASSE: SEM PORTAS VS COM PORTAS ==========
+experimento  features  accuracy_train  accuracy_test  f1_weighted  f1_macro  gap_train_test
+ sem_portas        77             1.0            1.0          1.0       1.0             0.0
+ com_portas        79             1.0            1.0          1.0       1.0             0.0
+
+Diferença F1 weighted com portas - sem portas: 0.0000
+Interpretação: portas não alteraram muito o desempenho. Isso fortalece a versão sem portas.
+
+========== COMPARAÇÃO — TODOS OS ATRIBUTOS VS TOP 10 ==========
+========== COMPARAÇÃO RF: TODOS OS ATRIBUTOS VS TOP 10 ==========
+            experimento  features  accuracy_train  accuracy_test  f1_weighted  f1_macro  gap_train_test
+todos_atributos_seguros        77             1.0            1.0          1.0       1.0             0.0
+       top_10_atributos        10             1.0            1.0          1.0       1.0             0.0
+
+Top 10 atributos:
+- fwd_seg_size_avg
+- pkt_len_std
+- pkt_len_max
+- fwd_pkt_len_std
+- subflow_fwd_byts
+- pkt_len_var
+- pkt_size_avg
+- totlen_fwd_pkts
+- pkt_len_mean
+- fwd_pkt_len_mean
+
+Diferença F1 weighted todos - Top 10: 0.0000
+Interpretação: Top 10 manteve desempenho próximo. Poucos atributos concentram poder discriminativo.
+
+========== GATE DE RESULTADO APRESENTÁVEL ==========
+========== GATE DE RESULTADO APRESENTÁVEL ==========
+F1 weighted multiclasse: 1.0000
+F1 macro multiclasse:    1.0000
+Gap treino-teste:        0.0000
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 1.0000
+- c2_beacon: 1.0000
+- dos_flood: 1.0000
+- mqtt_abuse: 1.0000
+- scan: 1.0000
+- slow_dos: 1.0000
+
+Problemas:
+- Nenhum problema crítico.
+
+STATUS: RESULTADO APRESENTÁVEL.
+
+[OK] Treinamento e avaliação finalizados.

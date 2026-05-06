@@ -1,0 +1,13 @@
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        37
+  bruteforce       1.00      0.86      0.92        35
+   c2_beacon       0.14      1.00      0.25        20
+   dos_flood       0.00      0.00      0.00       120
+  mqtt_abuse       1.00      1.00      1.00         1
+        scan       1.00      1.00      1.00        36
+    slow_dos       1.00      1.00      1.00         4
+
+    accuracy                           0.51       253
+   macro avg       0.73      0.84      0.74       253
+weighted avg       0.46      0.51      0.46       253

@@ -1,0 +1,8 @@
+filename,usage,label,attack_type
+benign_09.pcap,blind,0,benign
+bruteforce_09.pcap,blind,1,bruteforce
+c2_09.pcap,blind,1,c2_beacon
+flood_09.pcap,blind,1,dos_flood
+mqtt_abuse_09.pcap,blind,1,mqtt_abuse
+scan_09.pcap,blind,1,scan
+slow_dos_09.pcap,blind,1,slow_dos

@@ -1,0 +1,15 @@
+usage,Attack_Type,rows
+test,benign,37
+test,bruteforce,35
+test,c2_beacon,20
+test,dos_flood,320
+test,mqtt_abuse,70
+test,scan,36
+test,slow_dos,50
+train,benign,43
+train,bruteforce,95
+train,c2_beacon,55
+train,dos_flood,1000
+train,mqtt_abuse,240
+train,scan,108
+train,slow_dos,115

@@ -1,0 +1,237 @@
+========== TREINO V2 — GROUP CV POR RODADA ==========
+[INFO] Linhas totais: 3158
+[INFO] Features: 77
+[INFO] Rodadas: ['1', '2', '3', '4', '5', '6', '7', '8']
+
+[INFO] Distribuição por classe:
+Attack_Type
+benign         134
+bruteforce     171
+c2_beacon      412
+dos_flood     1404
+mqtt_abuse     439
+scan           294
+slow_dos       304
+Name: count, dtype: int64
+
+[INFO] Distribuição por rodada/classe:
+round_id  Attack_Type
+1         benign          12
+          bruteforce      20
+          c2_beacon       20
+          dos_flood      250
+          mqtt_abuse      60
+          scan            36
+          slow_dos        30
+2         benign          22
+          bruteforce      50
+          c2_beacon       15
+          dos_flood      350
+          mqtt_abuse      80
+          scan            36
+          slow_dos        45
+3         benign           9
+          bruteforce      25
+          c2_beacon       20
+          dos_flood      400
+          mqtt_abuse     100
+          scan            36
+          slow_dos        40
+4         benign          37
+          bruteforce      35
+          c2_beacon       20
+          dos_flood      320
+          mqtt_abuse      70
+          scan            36
+          slow_dos        50
+5         benign          54
+          bruteforce      41
+          c2_beacon       40
+          dos_flood       84
+          mqtt_abuse     129
+          scan           150
+          slow_dos       139
+6         c2_beacon      120
+7         c2_beacon      100
+8         c2_beacon       77
+
+========== AVALIANDO: rf_regularizado_depth6_leaf10 ==========
+[FOLD rodada 1] train_acc=0.9374 | val_acc=0.3738 | gap=0.5635 | min_recall=0.0000
+[FOLD rodada 2] train_acc=0.9289 | val_acc=0.9883 | gap=-0.0594 | min_recall=0.5333
+[FOLD rodada 3] train_acc=0.9422 | val_acc=0.9968 | gap=-0.0546 | min_recall=0.9000
+[FOLD rodada 4] train_acc=0.9405 | val_acc=0.9894 | gap=-0.0489 | min_recall=0.7000
+[FOLD rodada 5] train_acc=1.0000 | val_acc=0.6342 | gap=0.3658 | min_recall=0.0000
+[FOLD rodada 6] train_acc=0.9549 | val_acc=1.0000 | gap=-0.0451 | min_recall=0.0000
+[FOLD rodada 7] train_acc=0.9526 | val_acc=1.0000 | gap=-0.0474 | min_recall=0.0000
+[FOLD rodada 8] train_acc=0.9529 | val_acc=0.9481 | gap=0.0049 | min_recall=0.0000
+
+[RESULTADO GROUPCV]
+Accuracy: 0.8353
+F1 macro: 0.8272
+F1 weighted: 0.8551
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0849
+
+[RECALL POR CLASSE]
+ - benign: 1.0000
+ - bruteforce: 0.7602
+ - c2_beacon: 0.9102
+ - dos_flood: 0.7621
+ - mqtt_abuse: 0.8884
+ - scan: 1.0000
+ - slow_dos: 0.8059
+
+========== AVALIANDO: rf_regularizado_depth8_leaf5 ==========
+[FOLD rodada 1] train_acc=0.9505 | val_acc=0.4159 | gap=0.5347 | min_recall=0.0000
+[FOLD rodada 2] train_acc=0.9473 | val_acc=1.0000 | gap=-0.0527 | min_recall=1.0000
+[FOLD rodada 3] train_acc=0.9502 | val_acc=1.0000 | gap=-0.0498 | min_recall=1.0000
+[FOLD rodada 4] train_acc=0.9479 | val_acc=1.0000 | gap=-0.0521 | min_recall=1.0000
+[FOLD rodada 5] train_acc=1.0000 | val_acc=0.6342 | gap=0.3658 | min_recall=0.0000
+[FOLD rodada 6] train_acc=0.9559 | val_acc=1.0000 | gap=-0.0441 | min_recall=0.0000
+[FOLD rodada 7] train_acc=0.9565 | val_acc=1.0000 | gap=-0.0435 | min_recall=0.0000
+[FOLD rodada 8] train_acc=0.9585 | val_acc=0.9610 | gap=-0.0026 | min_recall=0.0000
+
+[RESULTADO GROUPCV]
+Accuracy: 0.8461
+F1 macro: 0.8383
+F1 weighted: 0.8623
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0819
+
+[RECALL POR CLASSE]
+ - benign: 1.0000
+ - bruteforce: 0.7602
+ - c2_beacon: 0.9927
+ - dos_flood: 0.7621
+ - mqtt_abuse: 0.8884
+ - scan: 1.0000
+ - slow_dos: 0.8059
+
+========== AVALIANDO: rf_regularizado_depth10_leaf3 ==========
+[FOLD rodada 1] train_acc=0.9604 | val_acc=0.4159 | gap=0.5446 | min_recall=0.0000
+[FOLD rodada 2] train_acc=0.9594 | val_acc=1.0000 | gap=-0.0406 | min_recall=1.0000
+[FOLD rodada 3] train_acc=0.9608 | val_acc=1.0000 | gap=-0.0392 | min_recall=1.0000
+[FOLD rodada 4] train_acc=0.9606 | val_acc=1.0000 | gap=-0.0394 | min_recall=1.0000
+[FOLD rodada 5] train_acc=1.0000 | val_acc=0.6342 | gap=0.3658 | min_recall=0.0000
+[FOLD rodada 6] train_acc=0.9635 | val_acc=1.0000 | gap=-0.0365 | min_recall=0.0000
+[FOLD rodada 7] train_acc=0.9637 | val_acc=1.0000 | gap=-0.0363 | min_recall=0.0000
+[FOLD rodada 8] train_acc=0.9669 | val_acc=0.9610 | gap=0.0059 | min_recall=0.0000
+
+[RESULTADO GROUPCV]
+Accuracy: 0.8461
+F1 macro: 0.8591
+F1 weighted: 0.8524
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0905
+
+[RECALL POR CLASSE]
+ - benign: 1.0000
+ - bruteforce: 0.7602
+ - c2_beacon: 0.9927
+ - dos_flood: 0.7621
+ - mqtt_abuse: 0.8884
+ - scan: 1.0000
+ - slow_dos: 0.8059
+
+========== AVALIANDO: rf_regularizado_depth12_leaf3 ==========
+[FOLD rodada 1] train_acc=0.9678 | val_acc=0.4159 | gap=0.5519 | min_recall=0.0000
+[FOLD rodada 2] train_acc=0.9680 | val_acc=1.0000 | gap=-0.0320 | min_recall=1.0000
+[FOLD rodada 3] train_acc=0.9691 | val_acc=1.0000 | gap=-0.0309 | min_recall=1.0000
+[FOLD rodada 4] train_acc=0.9687 | val_acc=1.0000 | gap=-0.0313 | min_recall=1.0000
+[FOLD rodada 5] train_acc=1.0000 | val_acc=0.6342 | gap=0.3658 | min_recall=0.0000
+[FOLD rodada 6] train_acc=0.9714 | val_acc=1.0000 | gap=-0.0286 | min_recall=0.0000
+[FOLD rodada 7] train_acc=0.9709 | val_acc=1.0000 | gap=-0.0291 | min_recall=0.0000
+[FOLD rodada 8] train_acc=0.9740 | val_acc=0.9610 | gap=0.0130 | min_recall=0.0000
+
+[RESULTADO GROUPCV]
+Accuracy: 0.8461
+F1 macro: 0.8591
+F1 weighted: 0.8524
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0973
+
+[RECALL POR CLASSE]
+ - benign: 1.0000
+ - bruteforce: 0.7602
+ - c2_beacon: 0.9927
+ - dos_flood: 0.7621
+ - mqtt_abuse: 0.8884
+ - scan: 1.0000
+ - slow_dos: 0.8059
+
+========== AVALIANDO: extratrees_regularizado_depth10_leaf3 ==========
+[FOLD rodada 1] train_acc=0.9531 | val_acc=0.4159 | gap=0.5372 | min_recall=0.0000
+[FOLD rodada 2] train_acc=0.9500 | val_acc=1.0000 | gap=-0.0500 | min_recall=1.0000
+[FOLD rodada 3] train_acc=0.9494 | val_acc=1.0000 | gap=-0.0506 | min_recall=1.0000
+[FOLD rodada 4] train_acc=0.9502 | val_acc=1.0000 | gap=-0.0498 | min_recall=1.0000
+[FOLD rodada 5] train_acc=1.0000 | val_acc=0.6342 | gap=0.3658 | min_recall=0.0000
+[FOLD rodada 6] train_acc=0.9575 | val_acc=1.0000 | gap=-0.0425 | min_recall=0.0000
+[FOLD rodada 7] train_acc=0.9572 | val_acc=1.0000 | gap=-0.0428 | min_recall=0.0000
+[FOLD rodada 8] train_acc=0.9585 | val_acc=0.9610 | gap=-0.0026 | min_recall=0.0000
+
+[RESULTADO GROUPCV]
+Accuracy: 0.8461
+F1 macro: 0.8382
+F1 weighted: 0.8612
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0831
+
+[RECALL POR CLASSE]
+ - benign: 1.0000
+ - bruteforce: 0.7602
+ - c2_beacon: 0.9927
+ - dos_flood: 0.7621
+ - mqtt_abuse: 0.8884
+ - scan: 1.0000
+ - slow_dos: 0.8059
+
+========== COMPARAÇÃO FINAL DOS MODELOS ==========
+                               modelo  accuracy_groupcv  f1_macro_groupcv  f1_weighted_groupcv  min_recall_groupcv  mean_train_acc  mean_val_acc  mean_gap  recall_benign  recall_bruteforce  recall_c2_beacon  recall_dos_flood  recall_mqtt_abuse  recall_scan  recall_slow_dos  selection_score
+        rf_regularizado_depth10_leaf3          0.846105          0.859073             0.852381            0.760234        0.966916      0.876394  0.090522            1.0           0.760234          0.992718          0.762108           0.888383          1.0         0.805921         2.334279
+        rf_regularizado_depth12_leaf3          0.846105          0.859073             0.852381            0.760234        0.973737      0.876394  0.097344            1.0           0.760234          0.992718          0.762108           0.888383          1.0         0.805921         2.330869
+         rf_regularizado_depth8_leaf5          0.846105          0.838329             0.862278            0.760234        0.958338      0.876394  0.081944            1.0           0.760234          0.992718          0.762108           0.888383          1.0         0.805921         2.317825
+extratrees_regularizado_depth10_leaf3          0.846105          0.838234             0.861205            0.760234        0.959479      0.876394  0.083085            1.0           0.760234          0.992718          0.762108           0.888383          1.0         0.805921         2.317160
+        rf_regularizado_depth6_leaf10          0.835339          0.827188             0.855088            0.760234        0.951185      0.866333  0.084852            1.0           0.760234          0.910194          0.762108           0.888383          1.0         0.805921         2.305230
+
+[INFO] Melhor modelo escolhido: rf_regularizado_depth10_leaf3
+
+========== GATE MODELO V2 — GROUP CV POR RODADA ==========
+Melhor modelo: rf_regularizado_depth10_leaf3
+Accuracy GroupCV: 0.8461
+F1 macro GroupCV: 0.8591
+F1 weighted GroupCV: 0.8524
+Menor recall por classe: 0.7602
+Gap médio treino-validação: 0.0905
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.7602
+- c2_beacon: 0.9927
+- dos_flood: 0.7621
+- mqtt_abuse: 0.8884
+- scan: 1.0000
+- slow_dos: 0.8059
+
+Problemas:
+- Nenhum problema crítico.
+
+STATUS: LIBERADO PARA TESTE CEGO NOVO.
+
+[OK] Arquivos gerados:
+ - results/modelo_v3_groupcv/01_build_dataset_v3.txt
+ - results/modelo_v3_groupcv/02_train_groupcv_v3.txt
+ - results/modelo_v3_groupcv/best_model_v2_groupcv.pkl
+ - results/modelo_v3_groupcv/comparison_groupcv_models.csv
+ - results/modelo_v3_groupcv/extratrees_regularizado_depth10_leaf3_classification_report_groupcv.txt
+ - results/modelo_v3_groupcv/extratrees_regularizado_depth10_leaf3_confusion_matrix_groupcv.png
+ - results/modelo_v3_groupcv/feature_columns_no_ports_v2.txt
+ - results/modelo_v3_groupcv/folds_groupcv_models.csv
+ - results/modelo_v3_groupcv/gate_modelo_v2_groupcv.txt
+ - results/modelo_v3_groupcv/rf_regularizado_depth10_leaf3_classification_report_groupcv.txt
+ - results/modelo_v3_groupcv/rf_regularizado_depth10_leaf3_confusion_matrix_groupcv.png
+ - results/modelo_v3_groupcv/rf_regularizado_depth12_leaf3_classification_report_groupcv.txt
+ - results/modelo_v3_groupcv/rf_regularizado_depth12_leaf3_confusion_matrix_groupcv.png
+ - results/modelo_v3_groupcv/rf_regularizado_depth6_leaf10_classification_report_groupcv.txt
+ - results/modelo_v3_groupcv/rf_regularizado_depth6_leaf10_confusion_matrix_groupcv.png
+ - results/modelo_v3_groupcv/rf_regularizado_depth8_leaf5_classification_report_groupcv.txt
+ - results/modelo_v3_groupcv/rf_regularizado_depth8_leaf5_confusion_matrix_groupcv.png

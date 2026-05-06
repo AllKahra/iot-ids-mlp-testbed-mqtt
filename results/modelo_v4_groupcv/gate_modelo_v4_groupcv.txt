@@ -1,0 +1,21 @@
+========== GATE MODELO V2 — GROUP CV POR RODADA ==========
+Melhor modelo: extratrees_regularizado_depth10_leaf3
+Accuracy GroupCV: 0.9562
+F1 macro GroupCV: 0.9617
+F1 weighted GroupCV: 0.9551
+Menor recall por classe: 0.8092
+Gap médio treino-validação: -0.0142
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.9966
+- c2_beacon: 0.9941
+- dos_flood: 0.9950
+- mqtt_abuse: 0.8250
+- scan: 1.0000
+- slow_dos: 0.8092
+
+Problemas:
+- Nenhum problema crítico.
+
+STATUS: LIBERADO PARA TESTE CEGO NOVO.

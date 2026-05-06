@@ -1,0 +1,7 @@
+========== COMPARAÇÃO RF MULTICLASSE: SEM PORTAS VS COM PORTAS ==========
+experimento  features  accuracy_train  accuracy_test  f1_weighted  f1_macro  gap_train_test
+ sem_portas        77             1.0       0.505929     0.455762  0.739011        0.494071
+ com_portas        79             1.0       0.525692     0.466403  0.750000        0.474308
+
+Diferença F1 weighted com portas - sem portas: 0.0106
+Interpretação: portas não alteraram muito o desempenho. Isso fortalece a versão sem portas.

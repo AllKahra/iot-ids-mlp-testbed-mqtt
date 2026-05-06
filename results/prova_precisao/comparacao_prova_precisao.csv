@@ -1,0 +1,6 @@
+experimento,target,features,accuracy_train,accuracy_test,precision_weighted,recall_weighted,f1_weighted,precision_macro,recall_macro,f1_macro,gap_train_test
+RF multiclasse sem portas,Attack_Type,77,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+RF binario sem portas,Label,77,1.0,0.9982394366197183,0.9982427459493805,0.9982394366197183,0.9982282060771439,0.9990601503759399,0.9864864864864865,0.9926803180453356,0.0017605633802817433
+RF multiclasse com portas,Attack_Type,79,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+RF multiclasse Top 10 atributos,Attack_Type,10,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0
+RF multiclasse labels embaralhados,Attack_Type,77,0.9830917874396136,0.5616197183098591,0.3850383976676789,0.5616197183098591,0.4270523353370855,0.2593694304289981,0.16989087301587302,0.15516823607913768,0.42147206912975443

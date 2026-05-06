@@ -1,0 +1,19 @@
+========== RESULTADO OFICIAL 2 — RANDOM FOREST BINÁRIO SEM PORTAS ==========
+Features: 77
+Accuracy treino: 1.0000
+Accuracy teste:  0.9982
+Precision weighted: 0.9982
+Recall weighted:    0.9982
+F1 weighted:        0.9982
+F1 macro:           0.9927
+Gap treino-teste:   0.0018
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      0.97      0.99        37
+   malicious       1.00      1.00      1.00       531
+
+    accuracy                           1.00       568
+   macro avg       1.00      0.99      0.99       568
+weighted avg       1.00      1.00      1.00       568

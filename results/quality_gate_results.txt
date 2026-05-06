@@ -1,0 +1,18 @@
+========== GATE DE RESULTADO APRESENTÁVEL ==========
+F1 weighted multiclasse: 1.0000
+F1 macro multiclasse:    1.0000
+Gap treino-teste:        0.0000
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 1.0000
+- c2_beacon: 1.0000
+- dos_flood: 1.0000
+- mqtt_abuse: 1.0000
+- scan: 1.0000
+- slow_dos: 1.0000
+
+Problemas:
+- Nenhum problema crítico.
+
+STATUS: RESULTADO APRESENTÁVEL.

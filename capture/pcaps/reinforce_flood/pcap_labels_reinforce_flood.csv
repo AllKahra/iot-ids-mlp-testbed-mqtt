@@ -1,0 +1,4 @@
+filename,usage,label,attack_type
+flood_10.pcap,train_v4,1,dos_flood
+flood_11.pcap,train_v4,1,dos_flood
+flood_12.pcap,train_v4,1,dos_flood

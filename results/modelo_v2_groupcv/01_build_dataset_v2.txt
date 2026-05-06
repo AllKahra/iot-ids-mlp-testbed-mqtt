@@ -1,0 +1,91 @@
+========== BUILD DATASET V2 — RODADAS 01 A 05 ==========
+[INFO] Dataset antigo carregado: (2224, 87)
+[INFO] Distribuição antiga:
+Attack_Type
+benign          80
+bruteforce     130
+c2_beacon       75
+dos_flood     1320
+mqtt_abuse     310
+scan           144
+slow_dos       165
+Name: count, dtype: int64
+
+[INFO] CSVs Rodada 05 encontrados: 7
+[INFO] benign_05.csv -> benign | linhas: 54
+[INFO] bruteforce_05.csv -> bruteforce | linhas: 41
+[INFO] c2_05.csv -> c2_beacon | linhas: 40
+[INFO] flood_05.csv -> dos_flood | linhas: 84
+[INFO] mqtt_abuse_05.csv -> mqtt_abuse | linhas: 129
+[INFO] scan_05.csv -> scan | linhas: 150
+[INFO] slow_dos_05.csv -> slow_dos | linhas: 139
+
+[INFO] Rodada 05 carregada: (637, 87)
+[INFO] Distribuição Rodada 05:
+Attack_Type
+benign         54
+bruteforce     41
+c2_beacon      40
+dos_flood      84
+mqtt_abuse    129
+scan          150
+slow_dos      139
+Name: count, dtype: int64
+
+[INFO] Linhas removidas por ausência total de features: 0
+
+========== DISTRIBUIÇÃO FINAL V2 ==========
+Attack_Type
+benign         134
+bruteforce     171
+c2_beacon      115
+dos_flood     1404
+mqtt_abuse     439
+scan           294
+slow_dos       304
+Name: count, dtype: int64
+
+========== DISTRIBUIÇÃO POR RODADA ==========
+round_id  Attack_Type
+01        benign          12
+          bruteforce      20
+          c2_beacon       20
+          dos_flood      250
+          mqtt_abuse      60
+          scan            36
+          slow_dos        30
+02        benign          22
+          bruteforce      50
+          c2_beacon       15
+          dos_flood      350
+          mqtt_abuse      80
+          scan            36
+          slow_dos        45
+03        benign           9
+          bruteforce      25
+          c2_beacon       20
+          dos_flood      400
+          mqtt_abuse     100
+          scan            36
+          slow_dos        40
+04        benign          37
+          bruteforce      35
+          c2_beacon       20
+          dos_flood      320
+          mqtt_abuse      70
+          scan            36
+          slow_dos        50
+05        benign          54
+          bruteforce      41
+          c2_beacon       40
+          dos_flood       84
+          mqtt_abuse     129
+          scan           150
+          slow_dos       139
+
+========== CHECAGEM DE FEATURES PROIBIDAS ==========
+[OK] Nenhuma feature proibida na versão oficial sem portas.
+
+[OK] Dataset V2 gerado:
+ - cicflowmeter/processed_csv_v2/dataset_rodadas_01_05.csv
+ - cicflowmeter/processed_csv_v2/feature_columns_no_ports_v2.txt

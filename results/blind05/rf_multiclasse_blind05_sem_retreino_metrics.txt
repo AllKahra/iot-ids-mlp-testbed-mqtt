@@ -1,0 +1,23 @@
+========== RF multiclasse blind05 sem retreino ==========
+Accuracy: 0.572998
+Precision weighted: 0.660965
+Recall weighted: 0.572998
+F1 weighted: 0.571734
+Precision macro: 0.446360
+Recall macro: 0.457635
+F1 macro: 0.396121
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       0.17      1.00      0.29        54
+  bruteforce       0.00      0.00      0.00        41
+   c2_beacon       0.00      0.00      0.00        40
+   dos_flood       0.00      0.00      0.00        84
+  mqtt_abuse       0.98      0.63      0.76       129
+        scan       0.98      1.00      0.99       150
+    slow_dos       1.00      0.58      0.73       139
+
+    accuracy                           0.57       637
+   macro avg       0.45      0.46      0.40       637
+weighted avg       0.66      0.57      0.57       637
