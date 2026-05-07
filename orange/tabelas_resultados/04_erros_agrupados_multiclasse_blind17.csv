@@ -1,0 +1,11 @@
+Attack_Type,prediction,Quantidade
+c2_beacon,bruteforce,58
+slow_dos,dos_flood,43
+mqtt_abuse,dos_flood,36
+dos_flood,c2_beacon,16
+dos_flood,bruteforce,15
+mqtt_abuse,slow_dos,11
+slow_dos,mqtt_abuse,7
+dos_flood,slow_dos,5
+dos_flood,mqtt_abuse,2
+c2_beacon,mqtt_abuse,1

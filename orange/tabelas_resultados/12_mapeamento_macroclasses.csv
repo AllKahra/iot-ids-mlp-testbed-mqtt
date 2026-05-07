@@ -1,0 +1,8 @@
+Classe_original,Macroclasse
+benign,benign
+scan,recon_scan
+bruteforce,auth_control_repetition
+c2_beacon,auth_control_repetition
+dos_flood,availability_abuse
+slow_dos,availability_abuse
+mqtt_abuse,availability_abuse
