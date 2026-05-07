@@ -1,0 +1,13 @@
+========== specialist_availability_abuse ==========
+Accuracy treino: 0.8555
+F1 macro treino: 0.8545
+
+              precision    recall  f1-score   support
+
+   dos_flood       0.94      0.84      0.89      2491
+  mqtt_abuse       0.82      0.84      0.83      2036
+    slow_dos       0.81      0.88      0.84      2277
+
+    accuracy                           0.86      6804
+   macro avg       0.86      0.86      0.85      6804
+weighted avg       0.86      0.86      0.86      6804

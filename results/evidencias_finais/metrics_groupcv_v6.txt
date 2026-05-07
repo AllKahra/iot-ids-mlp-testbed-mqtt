@@ -1,0 +1,57 @@
+========== MODELO V6 — V4 + BLIND14 + BLIND15 HARD CASES ==========
+
+Observação metodológica:
+Blind14 e Blind15 deixaram de ser testes cegos finais e foram incorporados como hard cases.
+O próximo teste realmente cego deverá ser o Blind16.
+
+Modelo escolhido:
+extratrees_depth10_leaf3_balanced
+
+Validação:
+GroupKFold por capture_id
+Splits: 5
+
+Métricas GroupCV do melhor modelo:
+Accuracy: 0.8236
+F1 macro: 0.8495
+F1 weighted: 0.8283
+Menor recall por classe: 0.7311
+Precision bruteforce: 0.7106
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 1.0000
+- c2_beacon: 0.8742
+- dos_flood: 0.7360
+- mqtt_abuse: 0.7679
+- scan: 1.0000
+- slow_dos: 0.7311
+
+Precision por classe:
+- benign: 1.0000
+- bruteforce: 0.7106
+- c2_beacon: 1.0000
+- dos_flood: 0.8784
+- mqtt_abuse: 0.5594
+- scan: 1.0000
+- slow_dos: 0.7375
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00       276
+  bruteforce       0.71      1.00      0.83       361
+   c2_beacon       1.00      0.87      0.93       787
+   dos_flood       0.88      0.74      0.80      2091
+  mqtt_abuse       0.56      0.77      0.65       797
+        scan       1.00      1.00      1.00       789
+    slow_dos       0.74      0.73      0.73       688
+
+    accuracy                           0.82      5789
+   macro avg       0.84      0.87      0.85      5789
+weighted avg       0.85      0.82      0.83      5789
+
+
+========== GATE V6 ==========
+STATUS: V6 APROVADO EM GROUPCV.
+Próximo passo: testar em Blind16 realmente cego.

@@ -1,0 +1,27 @@
+========== MULTICLASSE SOMENTE MALICIOUS — BLIND17 / MODELO V7 ==========
+Accuracy: 0.7437
+F1 macro: 0.6843
+
+              precision    recall  f1-score   support
+
+  bruteforce       0.35      1.00      0.52        40
+   c2_beacon       0.85      0.60      0.71       149
+   dos_flood       0.25      0.41      0.31        64
+  mqtt_abuse       0.88      0.61      0.72       121
+        scan       1.00      1.00      1.00       150
+    slow_dos       0.92      0.79      0.85       233
+
+    accuracy                           0.74       757
+   macro avg       0.71      0.73      0.68       757
+weighted avg       0.83      0.74      0.77       757
+
+
+Matriz de confusão:
+Previsto    bruteforce  c2_beacon  dos_flood  mqtt_abuse  scan  slow_dos
+Real                                                                    
+bruteforce          40          0          0           0     0         0
+c2_beacon           58         90          0           1     0         0
+dos_flood           15         16         26           2     0         5
+mqtt_abuse           0          0         36          74     0        11
+scan                 0          0          0           0   150         0
+slow_dos             0          0         43           7     0       183

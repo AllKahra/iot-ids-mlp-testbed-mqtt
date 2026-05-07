@@ -1,0 +1,14 @@
+========== macroclass ==========
+Accuracy treino: 0.9741
+F1 macro treino: 0.9600
+
+                         precision    recall  f1-score   support
+
+auth_control_repetition       0.96      0.98      0.97      2142
+     availability_abuse       0.98      0.98      0.98      6804
+                 benign       0.88      1.00      0.94       527
+             recon_scan       0.99      0.91      0.95      1225
+
+               accuracy                           0.97     10698
+              macro avg       0.95      0.97      0.96     10698
+           weighted avg       0.98      0.97      0.97     10698

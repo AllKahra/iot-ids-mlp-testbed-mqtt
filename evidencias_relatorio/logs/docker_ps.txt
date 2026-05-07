@@ -1,0 +1,2 @@
+NAMES           IMAGE        STATUS         PORTS
+ejbca-mariadb   mariadb:11   Up 8 minutes   3306/tcp

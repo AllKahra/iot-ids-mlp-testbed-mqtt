@@ -1,0 +1,40 @@
+========== RESULTADO TESTE CEGO V3 ==========
+Accuracy: 0.6893
+Precision weighted: 0.8381
+Recall weighted: 0.6893
+F1 weighted: 0.6940
+Precision macro: 0.8166
+Recall macro: 0.5973
+F1 macro: 0.6016
+Menor recall por classe: 0.0179
+
+Recall por classe:
+- benign: 0.5474
+- bruteforce: 0.5507
+- c2_beacon: 0.6711
+- dos_flood: 0.0179
+- mqtt_abuse: 0.5946
+- scan: 0.8654
+- slow_dos: 0.9342
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      0.55      0.71        95
+  bruteforce       0.31      0.55      0.40        69
+   c2_beacon       1.00      0.67      0.80       149
+   dos_flood       1.00      0.02      0.04        56
+  mqtt_abuse       0.96      0.59      0.73       111
+        scan       1.00      0.87      0.93       208
+    slow_dos       0.45      0.93      0.61       152
+
+    accuracy                           0.69       840
+   macro avg       0.82      0.60      0.60       840
+weighted avg       0.84      0.69      0.69       840
+
+
+========== GATE TESTE CEGO ==========
+- Há classe abaixo de 70% no teste cego.
+- F1 macro abaixo de 70%.
+STATUS: REPROVADO NO TESTE CEGO.
+Ação: esta rodada deve virar dado de treino/validação, e uma nova rodada cega deve ser criada.

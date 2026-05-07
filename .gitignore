@@ -1,20 +1,29 @@
-.venv/
-venv/
+# Python
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
 
+# Sistema
 .DS_Store
 Thumbs.db
 
+# Logs temporários
 *.log
+/tmp/
 *.tmp
-*.pid
 
-.cache/
-.pytest_cache/
+# Jupyter
+.ipynb_checkpoints/
 
-*.zip
-*.tar
-*.tar.gz
-*.7z
+# Arquivos temporários do sistema
+*.swp
+*.swo
+
+# Docker cache/local
+docker-data/

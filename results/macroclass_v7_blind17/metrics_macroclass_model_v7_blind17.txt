@@ -1,0 +1,23 @@
+========== MACROCLASSES — MODELO TREINADO V7 / BLIND17 ==========
+
+Macroclasses:
+- benign
+- recon_scan
+- auth_control_repetition = bruteforce + c2_beacon
+- availability_abuse = dos_flood + slow_dos + mqtt_abuse
+
+Accuracy: 0.9582
+F1 macro: 0.9687
+
+========== CLASSIFICATION REPORT ==========
+                         precision    recall  f1-score   support
+
+auth_control_repetition       0.85      0.99      0.92       189
+     availability_abuse       1.00      0.92      0.96       418
+                 benign       1.00      1.00      1.00        56
+             recon_scan       1.00      1.00      1.00       150
+
+               accuracy                           0.96       813
+              macro avg       0.96      0.98      0.97       813
+           weighted avg       0.96      0.96      0.96       813
+

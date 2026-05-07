@@ -1,0 +1,63 @@
+========== MODELO V5 — V4 + BLIND14 HARD CASES ==========
+
+Base:
+- V4: cicflowmeter/processed_csv_v4/dataset_v4_rodadas_01_12.csv
+- Blind14 usado como hard case: results/blind14_v4/dataset_blind14_labeled.csv
+
+Observação:
+O Blind14 deixou de ser teste cego e foi incorporado como reforço de treino/validação.
+O próximo teste realmente cego deverá ser o Blind15.
+
+Modelo:
+ExtraTreesClassifier regularizado
+- n_estimators=800
+- max_depth=10
+- min_samples_leaf=3
+- min_samples_split=8
+- max_features=sqrt
+- class_weight=balanced
+
+Validação:
+GroupKFold por capture_id
+Splits: 5
+
+Métricas GroupCV:
+Accuracy: 0.8354
+Precision weighted: 0.8750
+Recall weighted: 0.8354
+F1 weighted: 0.8452
+
+Precision macro: 0.8635
+Recall macro: 0.8871
+F1 macro: 0.8667
+
+Menor recall por classe: 0.7509
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.9938
+- c2_beacon: 0.9215
+- dos_flood: 0.7509
+- mqtt_abuse: 0.7907
+- scan: 1.0000
+- slow_dos: 0.7531
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       0.99      1.00      1.00       228
+  bruteforce       0.80      0.99      0.89       324
+   c2_beacon       1.00      0.92      0.96       650
+   dos_flood       0.94      0.75      0.83      2047
+  mqtt_abuse       0.49      0.79      0.60       688
+        scan       1.00      1.00      1.00       639
+    slow_dos       0.83      0.75      0.79       559
+
+    accuracy                           0.84      5135
+   macro avg       0.86      0.89      0.87      5135
+weighted avg       0.88      0.84      0.85      5135
+
+
+========== GATE V5 ==========
+STATUS: V5 APROVADO EM GROUPCV.
+Próximo passo: testar em Blind15 realmente cego.

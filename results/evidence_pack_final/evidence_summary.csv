@@ -1,0 +1,8 @@
+evidencia,resultado,interpretacao
+Blind17 rotulado - falsos negativos binários,0,Número de fluxos maliciosos classificados como benignos. Zero indica ausência de falso negativo binário.
+Blind17 rotulado - falsos positivos binários,0,Número de fluxos benignos classificados como maliciosos.
+Incidente final - fluxos CICFlowMeter,876,Quantidade de fluxos extraídos do PCAP final.
+Incidente final - macroclasse dominante,availability_abuse,"512 fluxos, percentual 0.5845."
+Incidente final - hipótese focada dominante,slow_dos,"315 fluxos, percentual 0.3596."
+Incidente final - ranking principal,slow_dos,"Família availability_abuse, score 0.5206."
+Incidente final - SHA256 PCAP,458978f9a02461d60baa56f0502d4ce11a4cc4fc22da35a845d4e2ddb29af2fa,Hash usado para integridade da evidência.

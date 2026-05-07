@@ -1,0 +1,30 @@
+========== MACROCLASSES — BLIND17 / MODELO V7 ==========
+
+Mapeamento:
+- benign -> benign
+- scan -> recon_scan
+- bruteforce + c2_beacon -> auth_control_repetition
+- dos_flood + slow_dos + mqtt_abuse -> availability_abuse
+
+Accuracy: 0.9606
+F1 macro: 0.9705
+
+                         precision    recall  f1-score   support
+
+auth_control_repetition       0.86      0.99      0.92       189
+     availability_abuse       1.00      0.93      0.96       418
+                 benign       1.00      1.00      1.00        56
+             recon_scan       1.00      1.00      1.00       150
+
+               accuracy                           0.96       813
+              macro avg       0.96      0.98      0.97       813
+           weighted avg       0.97      0.96      0.96       813
+
+
+Matriz de confusão:
+Previsto                 auth_control_repetition  availability_abuse  benign  recon_scan
+Real                                                                                    
+auth_control_repetition                      188                   1       0           0
+availability_abuse                            31                 387       0           0
+benign                                         0                   0      56           0
+recon_scan                                     0                   0       0         150

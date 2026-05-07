@@ -1,0 +1,14 @@
+========== CHECKS DE REDE DO INCIDENTE FINAL ==========
+
+1) Tráfego MQTT / porta 1883:
+3469
+
+2) Tráfego C2 / host 172.30.0.100 ou porta 9090:
+820
+
+3) Tráfego contra gateway 172.30.0.10 / HTTP-alt 8080:
+6198
+
+4) Total de pacotes no PCAP:
+10487
+

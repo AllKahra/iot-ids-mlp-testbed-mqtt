@@ -1,0 +1,12 @@
+========== specialist_auth_control_repetition ==========
+Accuracy treino: 0.8833
+F1 macro treino: 0.8759
+
+              precision    recall  f1-score   support
+
+  bruteforce       0.73      1.00      0.85       684
+   c2_beacon       1.00      0.83      0.91      1458
+
+    accuracy                           0.88      2142
+   macro avg       0.87      0.91      0.88      2142
+weighted avg       0.91      0.88      0.89      2142

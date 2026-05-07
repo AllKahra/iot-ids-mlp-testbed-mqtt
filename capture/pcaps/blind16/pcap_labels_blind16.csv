@@ -1,0 +1,8 @@
+filename,label,attack_type
+benign_16.pcap,0,benign
+scan_16.pcap,1,scan
+bruteforce_16.pcap,1,bruteforce
+c2_16.pcap,1,c2_beacon
+flood_16.pcap,1,dos_flood
+mqtt_abuse_16.pcap,1,mqtt_abuse
+slow_dos_16.pcap,1,slow_dos

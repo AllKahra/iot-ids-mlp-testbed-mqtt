@@ -1,0 +1,36 @@
+[
+    {
+        "Name": "iot_ids_net",
+        "Id": "6eae0f3f8b8894d689ace911e03331f79cb182b76a52635996bfcbc49b233c69",
+        "Created": "2026-05-03T14:15:49.244302799-04:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.30.0.0/24",
+                    "Gateway": "172.30.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "349316ac4ed98ffc20b34dfe8337725fcdaf1c3b853d2a1a4a4f9f7c88319b7e",
+            "com.docker.compose.network": "iotnet",
+            "com.docker.compose.project": "iot-ids-mlp-testbed-mqtt",
+            "com.docker.compose.version": "2.40.3"
+        }
+    }
+]

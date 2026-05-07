@@ -1,0 +1,7 @@
+hipotese_ataque,familia,score_final,voto_modelo_focado,voto_modelo_detalhado,prob_media_modelo_detalhado,prob_media_macroclasse
+slow_dos,availability_abuse,0.5206,0.5139,0.4682,0.4157,0.7658
+mqtt_abuse,availability_abuse,0.2911,0.2137,0.1615,0.252,0.7658
+dos_flood,availability_abuse,0.2319,0.1077,0.2055,0.1127,0.7658
+c2_beacon,auth_control_repetition,0.171,0.1615,0.1648,0.1845,0.1886
+bruteforce,auth_control_repetition,0.0317,0.0033,0.0,0.0105,0.1886
+scan,recon_scan,0.0101,0.0,0.0,0.0204,0.0398
