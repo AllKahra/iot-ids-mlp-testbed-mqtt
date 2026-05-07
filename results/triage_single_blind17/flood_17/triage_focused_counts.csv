@@ -1,0 +1,6 @@
+hipotese_final,quantidade_fluxos,percentual
+c2_beacon,16,0.25
+dos_flood,16,0.25
+bruteforce,15,0.234375
+slow_dos,11,0.171875
+mqtt_abuse,6,0.09375

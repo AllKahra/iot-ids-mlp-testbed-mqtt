@@ -1,0 +1,27 @@
+========== RELATÓRIO FINAL DE TRIAGEM IDS ==========
+
+Entrada analisada: cicflowmeter/raw_csv_blind17/benign_17.csv
+Total de fluxos analisados: 56
+Fluxos classificados como malicious: 0
+Percentual malicious: 0.0000
+Veredito geral: provavelmente_benigno
+
+========== MACROCLASSES ==========
+macroclasse  quantidade_fluxos  percentual
+     benign                 56         1.0
+
+========== CLASSES DETALHADAS — MODELO GERAL ==========
+classe_detalhada  quantidade_fluxos  percentual
+          benign                 56         1.0
+
+========== HIPÓTESES FINAIS — APÓS MODELO FOCADO ==========
+hipotese_final  quantidade_fluxos  percentual
+        benign                 56         1.0
+
+========== RANKING DE ATAQUES PROVÁVEIS ==========
+Empty DataFrame
+Columns: [hipotese_ataque, familia, score_final, voto_modelo_focado, voto_modelo_detalhado, prob_media_modelo_detalhado, prob_media_macroclasse]
+Index: []
+
+========== CONCLUSÃO AUTOMÁTICA ==========
+O tráfego analisado foi classificado majoritariamente como benigno.

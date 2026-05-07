@@ -1,0 +1,38 @@
+========== RELATÓRIO FINAL DE TRIAGEM IDS ==========
+
+Entrada analisada: cicflowmeter/raw_csv_blind17/bruteforce_17.csv
+Total de fluxos analisados: 40
+Fluxos classificados como malicious: 40
+Percentual malicious: 1.0000
+Veredito geral: malicioso_detectado
+
+========== MACROCLASSES ==========
+            macroclasse  quantidade_fluxos  percentual
+auth_control_repetition                 40         1.0
+
+========== CLASSES DETALHADAS — MODELO GERAL ==========
+classe_detalhada  quantidade_fluxos  percentual
+      bruteforce                 40         1.0
+
+========== HIPÓTESES FINAIS — APÓS MODELO FOCADO ==========
+hipotese_final  quantidade_fluxos  percentual
+    bruteforce                 40         1.0
+
+========== RANKING DE ATAQUES PROVÁVEIS ==========
+hipotese_ataque                 familia  score_final  voto_modelo_focado  voto_modelo_detalhado  prob_media_modelo_detalhado  prob_media_macroclasse
+     bruteforce auth_control_repetition       0.9361                 1.0                    1.0                       0.7143                  0.9548
+      c2_beacon auth_control_repetition       0.1914                 0.0                    0.0                       0.2409                  0.9548
+      dos_flood      availability_abuse       0.0129                 0.0                    0.0                       0.0313                  0.0442
+       slow_dos      availability_abuse       0.0090                 0.0                    0.0                       0.0117                  0.0442
+     mqtt_abuse      availability_abuse       0.0067                 0.0                    0.0                       0.0003                  0.0442
+           scan              recon_scan       0.0001                 0.0                    0.0                       0.0002                  0.0004
+
+========== CONCLUSÃO AUTOMÁTICA ==========
+O tráfego analisado foi classificado como malicioso.
+A família comportamental mais provável é: auth_control_repetition.
+O subtipo de ataque mais provável é: bruteforce.
+Score final da hipótese principal: 0.9361.
+
+Observação:
+O score final combina votos do modelo detalhado, modelo focado e probabilidade da macroclasse.
+Em caso real, esse resultado deve ser tratado como triagem e apoio à investigação, não como decisão única.

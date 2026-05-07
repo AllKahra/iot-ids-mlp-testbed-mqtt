@@ -1,0 +1,38 @@
+========== RELATÓRIO FINAL DE TRIAGEM IDS ==========
+
+Entrada analisada: cicflowmeter/raw_csv_blind17/scan_17.csv
+Total de fluxos analisados: 150
+Fluxos classificados como malicious: 150
+Percentual malicious: 1.0000
+Veredito geral: malicioso_detectado
+
+========== MACROCLASSES ==========
+macroclasse  quantidade_fluxos  percentual
+ recon_scan                150         1.0
+
+========== CLASSES DETALHADAS — MODELO GERAL ==========
+classe_detalhada  quantidade_fluxos  percentual
+            scan                150         1.0
+
+========== HIPÓTESES FINAIS — APÓS MODELO FOCADO ==========
+hipotese_final  quantidade_fluxos  percentual
+          scan                150         1.0
+
+========== RANKING DE ATAQUES PROVÁVEIS ==========
+hipotese_ataque                 familia  score_final  voto_modelo_focado  voto_modelo_detalhado  prob_media_modelo_detalhado  prob_media_macroclasse
+           scan              recon_scan          1.0                 1.0                    1.0                       0.9999                  0.9999
+     bruteforce auth_control_repetition          0.0                 0.0                    0.0                       0.0000                  0.0001
+      c2_beacon auth_control_repetition          0.0                 0.0                    0.0                       0.0000                  0.0001
+      dos_flood      availability_abuse          0.0                 0.0                    0.0                       0.0000                  0.0000
+     mqtt_abuse      availability_abuse          0.0                 0.0                    0.0                       0.0001                  0.0000
+       slow_dos      availability_abuse          0.0                 0.0                    0.0                       0.0000                  0.0000
+
+========== CONCLUSÃO AUTOMÁTICA ==========
+O tráfego analisado foi classificado como malicioso.
+A família comportamental mais provável é: recon_scan.
+O subtipo de ataque mais provável é: scan.
+Score final da hipótese principal: 1.0000.
+
+Observação:
+O score final combina votos do modelo detalhado, modelo focado e probabilidade da macroclasse.
+Em caso real, esse resultado deve ser tratado como triagem e apoio à investigação, não como decisão única.

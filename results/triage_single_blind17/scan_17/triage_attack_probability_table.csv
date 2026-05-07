@@ -1,0 +1,7 @@
+hipotese_ataque,familia,score_final,voto_modelo_focado,voto_modelo_detalhado,prob_media_modelo_detalhado,prob_media_macroclasse
+scan,recon_scan,1.0,1.0,1.0,0.9999,0.9999
+bruteforce,auth_control_repetition,0.0,0.0,0.0,0.0,0.0001
+c2_beacon,auth_control_repetition,0.0,0.0,0.0,0.0,0.0001
+dos_flood,availability_abuse,0.0,0.0,0.0,0.0,0.0
+mqtt_abuse,availability_abuse,0.0,0.0,0.0,0.0001,0.0
+slow_dos,availability_abuse,0.0,0.0,0.0,0.0,0.0

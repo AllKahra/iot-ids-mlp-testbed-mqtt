@@ -1,0 +1,47 @@
+========== RELATÓRIO FINAL DE TRIAGEM IDS ==========
+
+Entrada analisada: cicflowmeter/raw_csv_blind17/flood_17.csv
+Total de fluxos analisados: 64
+Fluxos classificados como malicious: 64
+Percentual malicious: 1.0000
+Veredito geral: malicioso_detectado
+
+========== MACROCLASSES ==========
+            macroclasse  quantidade_fluxos  percentual
+     availability_abuse                 33    0.515625
+auth_control_repetition                 31    0.484375
+
+========== CLASSES DETALHADAS — MODELO GERAL ==========
+classe_detalhada  quantidade_fluxos  percentual
+       dos_flood                 26    0.406250
+       c2_beacon                 16    0.250000
+      bruteforce                 15    0.234375
+        slow_dos                  5    0.078125
+      mqtt_abuse                  2    0.031250
+
+========== HIPÓTESES FINAIS — APÓS MODELO FOCADO ==========
+hipotese_final  quantidade_fluxos  percentual
+     c2_beacon                 16    0.250000
+     dos_flood                 16    0.250000
+    bruteforce                 15    0.234375
+      slow_dos                 11    0.171875
+    mqtt_abuse                  6    0.093750
+
+========== RANKING DE ATAQUES PROVÁVEIS ==========
+hipotese_ataque                 familia  score_final  voto_modelo_focado  voto_modelo_detalhado  prob_media_modelo_detalhado  prob_media_macroclasse
+      dos_flood      availability_abuse       0.3132              0.2500                 0.4062                       0.1954                  0.4834
+      c2_beacon auth_control_repetition       0.2955              0.2500                 0.2500                       0.3102                  0.4731
+     bruteforce auth_control_repetition       0.2562              0.2344                 0.2344                       0.1644                  0.4731
+       slow_dos      availability_abuse       0.1946              0.1719                 0.0781                       0.1693                  0.4834
+     mqtt_abuse      availability_abuse       0.1473              0.0938                 0.0312                       0.1472                  0.4834
+           scan              recon_scan       0.0090              0.0000                 0.0000                       0.0128                  0.0428
+
+========== CONCLUSÃO AUTOMÁTICA ==========
+O tráfego analisado foi classificado como malicioso.
+A família comportamental mais provável é: availability_abuse.
+O subtipo de ataque mais provável é: dos_flood.
+Score final da hipótese principal: 0.3132.
+
+Observação:
+O score final combina votos do modelo detalhado, modelo focado e probabilidade da macroclasse.
+Em caso real, esse resultado deve ser tratado como triagem e apoio à investigação, não como decisão única.
