@@ -1,0 +1,7 @@
+Experimento,Tipo,Accuracy,F1_macro,F1_weighted,Menor_recall,Interpretacao
+V7 GroupCV,Validação por capture_id,0.7571,0.7837,0.7615,0.6306,Modelo V7 apresentou bom desempenho interno em validação por grupos.
+Blind17 multiclasse,Teste cego por subtipo,0.7613776137761378,0.7293748456230522,0.78295533370115,,"Classificação detalhada aceitável, mas com confusão entre subtipos maliciosos."
+Blind17 binário,Benign x malicious,1.0,1.0,1.0,,IDS binário excelente; nenhum tráfego malicioso foi classificado como benigno.
+Blind17 malicious-only,Somente classes maliciosas,0.7437252311756936,0.6842706532268942,0.766899189298593,,Avaliação mostra limitação na diferenciação fina entre ataques semelhantes.
+Blind17 macroclasses por remapeamento,Famílias comportamentais,0.9606396063960639,0.97046659855009,0.961354166161717,,Agrupamento por família comportamental reduz grande parte dos erros.
+Modelo macroclasses V7,Modelo treinado diretamente em macroclasses,0.9582,0.9687,0.96,,Melhor solução para reduzir erros entre subtipos parecidos.

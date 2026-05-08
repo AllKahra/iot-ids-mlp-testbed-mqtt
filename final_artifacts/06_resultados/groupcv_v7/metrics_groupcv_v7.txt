@@ -1,0 +1,65 @@
+========== MODELO V7 FINAL — RANDOM FOREST ==========
+
+Observação metodológica:
+Blind16 deixou de ser teste cego final e foi incorporado como hard case.
+Os PCAPs de reforço V7 foram usados para melhorar a diferenciação entre classes confundidas.
+O próximo teste realmente cego deverá ser o Blind17.
+
+Modelo escolhido:
+RandomForestClassifier regularizado
+- n_estimators=800
+- max_depth=12
+- min_samples_leaf=3
+- min_samples_split=8
+- max_features=sqrt
+- class_weight=balanced
+
+Validação:
+GroupKFold por capture_id
+Splits: 5
+
+Métricas GroupCV:
+Accuracy: 0.7571
+Precision macro: 0.7816
+F1 macro: 0.7837
+F1 weighted: 0.7615
+Menor recall por classe: 0.6306
+Precision bruteforce: 0.6028
+
+Recall por classe:
+- benign: 0.9184
+- bruteforce: 0.8787
+- c2_beacon: 0.8217
+- dos_flood: 0.7431
+- mqtt_abuse: 0.6306
+- scan: 0.9012
+- slow_dos: 0.6926
+
+Precision por classe:
+- benign: 0.8134
+- bruteforce: 0.6028
+- c2_beacon: 0.9448
+- dos_flood: 0.8670
+- mqtt_abuse: 0.6401
+- scan: 0.9928
+- slow_dos: 0.6101
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       0.81      0.92      0.86       527
+  bruteforce       0.60      0.88      0.72       684
+   c2_beacon       0.94      0.82      0.88      1458
+   dos_flood       0.87      0.74      0.80      2491
+  mqtt_abuse       0.64      0.63      0.64      2036
+        scan       0.99      0.90      0.94      1225
+    slow_dos       0.61      0.69      0.65      2277
+
+    accuracy                           0.76     10698
+   macro avg       0.78      0.80      0.78     10698
+weighted avg       0.77      0.76      0.76     10698
+
+
+========== GATE V7 ==========
+STATUS: V7 BOM EM GROUPCV.
+Próximo passo: testar em Blind17 realmente cego.

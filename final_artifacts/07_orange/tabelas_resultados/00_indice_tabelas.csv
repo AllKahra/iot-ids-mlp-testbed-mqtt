@@ -1,0 +1,14 @@
+Arquivo,Conteudo
+01_tabela_resultados_gerais.csv,Resumo dos principais experimentos e métricas finais.
+02_tabela_por_classe_multiclasse_blind17.csv,"Precision, recall, F1 e support por classe no Blind17 multiclasse."
+03_matriz_confusao_multiclasse_blind17.csv,Matriz de confusão da classificação detalhada por subtipo.
+04_erros_agrupados_multiclasse_blind17.csv,Lista dos principais erros agrupados por classe real e classe prevista.
+05_resumo_erros_por_classe_blind17.csv,"Resumo de acertos, erros, taxa de erro e recall por classe."
+06_tabela_binaria_blind17.csv,Métricas da avaliação binária benign x malicious.
+07_matriz_confusao_binaria_blind17.csv,Matriz de confusão da avaliação binária.
+08_tabela_malicious_only_blind17.csv,Métricas considerando apenas classes maliciosas.
+09_matriz_confusao_malicious_only_blind17.csv,Matriz de confusão apenas entre ataques.
+10_tabela_macroclasses_blind17.csv,Métricas por macroclasse comportamental.
+11_matriz_confusao_macroclasses_blind17.csv,Matriz de confusão por macroclasses.
+12_mapeamento_macroclasses.csv,Mapeamento entre classes originais e macroclasses.
+13_rank_features_modelo_v7.csv,Ranking de importância das features no modelo V7.

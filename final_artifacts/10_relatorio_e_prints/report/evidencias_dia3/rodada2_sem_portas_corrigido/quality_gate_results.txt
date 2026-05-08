@@ -1,0 +1,21 @@
+========== GATE DE RESULTADO APRESENTÁVEL ==========
+F1 weighted multiclasse: 0.4558
+F1 macro multiclasse:    0.7390
+Gap treino-teste:        0.4941
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 0.8571
+- c2_beacon: 1.0000
+- dos_flood: 0.0000
+- mqtt_abuse: 1.0000
+- scan: 1.0000
+- slow_dos: 1.0000
+
+Problemas:
+- F1 weighted multiclasse abaixo de 0.75.
+- Gap treino-teste acima de 0.20. Possível overfitting.
+- Há classe com recall 0.00: dos_flood
+
+STATUS: AINDA NÃO ESTÁ IDEAL PARA RESULTADO FINAL.
+Ação recomendada: corrigir dataset das classes problemáticas e reexecutar o pipeline.

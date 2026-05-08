@@ -1,0 +1,7 @@
+Real,bruteforce,c2_beacon,dos_flood,mqtt_abuse,scan,slow_dos
+bruteforce,40,0,0,0,0,0
+c2_beacon,58,90,0,1,0,0
+dos_flood,15,16,26,2,0,5
+mqtt_abuse,0,0,36,74,0,11
+scan,0,0,0,0,150,0
+slow_dos,0,0,43,7,0,183

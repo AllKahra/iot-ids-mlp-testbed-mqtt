@@ -1,0 +1,8 @@
+Classe,Total,Acertos,Erros,Taxa_erro,Recall
+dos_flood,64,26,38,0.5938,0.4062
+c2_beacon,149,90,59,0.396,0.604
+mqtt_abuse,121,74,47,0.3884,0.6116
+slow_dos,233,183,50,0.2146,0.7854
+benign,56,56,0,0.0,1.0
+bruteforce,40,40,0,0.0,1.0
+scan,150,150,0,0.0,1.0
