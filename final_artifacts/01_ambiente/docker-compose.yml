@@ -1,0 +1,106 @@
+services:
+  iot-gateway:
+    build: .
+    container_name: iot-gateway
+    volumes:
+      - ./gateway:/app
+    working_dir: /app
+    command: ["python", "-u", "gateway.py"]
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.10
+
+  sensor01:
+    build: .
+    container_name: sensor01
+    volumes:
+      - ./sensors:/app
+    working_dir: /app
+    command: ["python", "-u", "sensor_normal.py", "sensor01", "3", "5"]
+    depends_on:
+      - iot-gateway
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.11
+
+  sensor02:
+    build: .
+    container_name: sensor02
+    volumes:
+      - ./sensors:/app
+    working_dir: /app
+    command: ["python", "-u", "sensor_normal.py", "sensor02", "4", "7"]
+    depends_on:
+      - iot-gateway
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.12
+
+  sensor-mqtt-normal:
+    build: .
+    container_name: sensor-mqtt-normal
+    volumes:
+      - ./sensors:/app
+    working_dir: /app
+    command: ["python", "-u", "sensor_mqtt.py", "sensor-mqtt-normal", "4", "8"]
+    depends_on:
+      - mqtt-broker
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.14
+
+  sensor03-compromised:
+    build: .
+    container_name: sensor03-compromised
+    volumes:
+      - ./sensors:/app
+    working_dir: /app
+    command: ["tail", "-f", "/dev/null"]
+    depends_on:
+      - fake-c2
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.13
+
+  mqtt-broker:
+    image: eclipse-mosquitto:2
+    container_name: mqtt-broker
+    volumes:
+      - ./mqtt/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.20
+
+  fake-c2:
+    build: .
+    container_name: fake-c2
+    volumes:
+      - ./c2:/app
+    working_dir: /app
+    command: ["python", "-u", "fake_c2.py"]
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.100
+
+  botnet-controller:
+    build: .
+    container_name: botnet-controller
+    volumes:
+      - ./attacker:/app
+    working_dir: /app
+    command: ["tail", "-f", "/dev/null"]
+    depends_on:
+      - iot-gateway
+      - fake-c2
+      - mqtt-broker
+    networks:
+      iotnet:
+        ipv4_address: 172.30.0.200
+
+networks:
+  iotnet:
+    name: iot_ids_net
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24

@@ -1,0 +1,8 @@
+Classe,Precision,Recall,F1_score,Support,Nivel
+benign,1.0,1.0,1.0,56,Excelente
+bruteforce,0.354,1.0,0.5229,40,Bom
+c2_beacon,0.8491,0.604,0.7059,149,Aceitável mínimo
+dos_flood,0.2476,0.4062,0.3077,64,Baixo
+mqtt_abuse,0.881,0.6116,0.722,121,Aceitável mínimo
+scan,1.0,1.0,1.0,150,Excelente
+slow_dos,0.9196,0.7854,0.8472,233,Bom

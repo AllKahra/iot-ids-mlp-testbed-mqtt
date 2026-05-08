@@ -1,0 +1,8 @@
+classe,recall
+benign,1.0
+bruteforce,1.0
+c2_beacon,0.6040268456375839
+dos_flood,0.40625
+mqtt_abuse,0.6115702479338843
+scan,1.0
+slow_dos,0.7854077253218884

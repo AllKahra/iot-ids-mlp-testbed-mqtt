@@ -1,0 +1,5 @@
+Macroclasse,Precision,Recall,F1_score,Support
+auth_control_repetition,0.8584,0.9947,0.9216,189
+availability_abuse,0.9974,0.9258,0.9603,418
+benign,1.0,1.0,1.0,56
+recon_scan,1.0,1.0,1.0,150

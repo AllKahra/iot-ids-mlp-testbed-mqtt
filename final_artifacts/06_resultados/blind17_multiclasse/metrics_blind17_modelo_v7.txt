@@ -1,0 +1,53 @@
+========== RESULTADO TESTE CEGO V3 ==========
+Accuracy: 0.7614
+Precision weighted: 0.8406
+Recall weighted: 0.7614
+F1 weighted: 0.7830
+Precision macro: 0.7502
+Recall macro: 0.7725
+F1 macro: 0.7294
+Menor recall por classe: 0.4062
+
+Recall por classe:
+- benign: 1.0000
+- bruteforce: 1.0000
+- c2_beacon: 0.6040
+- dos_flood: 0.4062
+- mqtt_abuse: 0.6116
+- scan: 1.0000
+- slow_dos: 0.7854
+
+========== CLASSIFICATION REPORT ==========
+              precision    recall  f1-score   support
+
+      benign       1.00      1.00      1.00        56
+  bruteforce       0.35      1.00      0.52        40
+   c2_beacon       0.85      0.60      0.71       149
+   dos_flood       0.25      0.41      0.31        64
+  mqtt_abuse       0.88      0.61      0.72       121
+        scan       1.00      1.00      1.00       150
+    slow_dos       0.92      0.79      0.85       233
+
+    accuracy                           0.76       813
+   macro avg       0.75      0.77      0.73       813
+weighted avg       0.84      0.76      0.78       813
+
+========== GATE TESTE CEGO — CRITÉRIO FINAL DO PROJETO ==========
+
+Critério de leitura adotado:
+- F1 macro multiclasse >= 0.60: resultado aceitável mínimo.
+- F1 macro multiclasse >= 0.70: resultado aceitável forte/bom para cenário experimental.
+- Classe individual abaixo de 0.60 de recall: limitação específica por classe.
+- A detecção binária deve ser analisada separadamente da identificação detalhada por subtipo.
+
+STATUS: APROVADO COMO RESULTADO MULTICLASSE ACEITÁVEL, COM LIMITAÇÃO ESPECÍFICA.
+
+Justificativa:
+O Blind17 obteve F1 macro de 0.7294 e F1 weighted de 0.7830, indicando desempenho aceitável na classificação multiclasse em teste cego. As classes benign, bruteforce e scan apresentaram recall de 1.0000, enquanto slow_dos apresentou recall de 0.7854. As classes c2_beacon e mqtt_abuse ficaram em nível aceitável mínimo, com recalls próximos de 0.60.
+
+Limitação principal:
+A classe dos_flood apresentou recall de 0.4062, sendo a principal limitação da classificação detalhada por subtipo. Portanto, o resultado não deve ser interpretado como identificação perfeita de todos os ataques, mas como uma classificação multiclasse aceitável com dificuldade específica em dos_flood.
+
+Interpretação final:
+O modelo V7 é forte para detecção binária de tráfego malicioso, excelente na leitura por macroclasses comportamentais e aceitável na classificação multiclasse detalhada. A limitação está na separação fina entre subtipos maliciosos semelhantes, especialmente ataques associados a abuso de disponibilidade.
+
