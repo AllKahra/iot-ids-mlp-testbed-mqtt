@@ -1,34 +1,57 @@
 # IDS para Tráfego IoT Simulado com Docker, CICFlowMeter e Machine Learning
 
-Este projeto implementa um testbed IoT em Docker para geração de tráfego benigno e malicioso, captura de PCAPs, extração de features com CICFlowMeter e avaliação de modelos de Machine Learning para detecção de intrusão.
+Este repositório contém um projeto de IDS para tráfego IoT simulado, com geração de tráfego benigno e malicioso, captura de PCAPs, extração de features com CICFlowMeter e avaliação com Machine Learning.
 
-## Objetivo
+## Estrutura do repositório
 
-Avaliar a identificação de tráfego malicioso em ambiente IoT simulado em três níveis: detecção binária, classificação multiclasse por subtipo e classificação por macroclasses comportamentais.
+| Pasta | Conteúdo |
+|---|---|
+| `final_artifacts/` | Artefatos finais organizados para relatório e apresentação |
+| `legacy_project/` | Estrutura bruta/original do projeto, preservada para rastreabilidade |
+| `docs/` | Documentação complementar do projeto |
+| `archive/` | Arquivos compactados e materiais auxiliares antigos |
+
+## Resultado oficial
+
+O resultado oficial do projeto está documentado em:
+
+```text
+final_artifacts/
+```
+
+Essa pasta separa:
+
+- objeto de estudo;
+- dados usados no projeto;
+- dados de treino/reforço;
+- teste cego final Blind17;
+- modelos treinados;
+- resultados oficiais;
+- demonstração no Orange;
+- scripts de reprodução;
+- evidências do relatório.
 
 ## Classes avaliadas
 
-- benign
-- scan
-- bruteforce
-- c2_beacon
-- dos_flood
-- slow_dos
-- mqtt_abuse
+- `benign`
+- `scan`
+- `bruteforce`
+- `c2_beacon`
+- `dos_flood`
+- `slow_dos`
+- `mqtt_abuse`
 
 ## Macroclasses comportamentais
 
 | Macroclasse | Classes agrupadas |
 |---|---|
-| benign | benign |
-| recon_scan | scan |
-| auth_control_repetition | bruteforce, c2_beacon |
-| availability_abuse | dos_flood, slow_dos, mqtt_abuse |
+| `benign` | `benign` |
+| `recon_scan` | `scan` |
+| `auth_control_repetition` | `bruteforce`, `c2_beacon` |
+| `availability_abuse` | `dos_flood`, `slow_dos`, `mqtt_abuse` |
 
-## Pipeline experimental
+## Interpretação final
 
-Docker testbed → geração de tráfego → captura PCAP → CICFlowMeter → CSV rotulado → pré-processamento → treino do modelo → teste cego Blind17 → avaliações.
+O modelo V7 apresentou excelente desempenho na detecção binária `benign x malicious`, desempenho aceitável na classificação multiclasse por subtipo e desempenho elevado na classificação por macroclasses comportamentais.
 
-## Artefatos finais
-
-Os artefatos organizados para relatório estão em final_artifacts/.
+A principal limitação observada está na separação fina entre subtipos maliciosos semelhantes.
