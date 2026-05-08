@@ -2,34 +2,32 @@
 
 Este repositório contém um projeto de IDS para tráfego IoT simulado, com geração de tráfego benigno e malicioso, captura de PCAPs, extração de features com CICFlowMeter e avaliação com Machine Learning.
 
-## Estrutura do repositório
+## Estrutura principal
 
-| Pasta | Conteúdo |
+| Pasta | Função |
 |---|---|
-| `final_artifacts/` | Artefatos finais organizados para relatório e apresentação |
-| `legacy_project/` | Estrutura bruta/original do projeto, preservada para rastreabilidade |
-| `docs/` | Documentação complementar do projeto |
+| `final_artifacts/` | Pasta oficial de avaliação, relatório e evidências finais |
+| `legacy_project/` | Histórico bruto/original do desenvolvimento, preservado para rastreabilidade |
+| `docs/` | Documentação complementar |
 | `archive/` | Arquivos compactados e materiais auxiliares antigos |
 
-## Resultado oficial
+## Pasta oficial do relatório
 
-O resultado oficial do projeto está documentado em:
+A pasta principal para avaliação do projeto é:
 
 ```text
 final_artifacts/
 ```
 
-Essa pasta separa:
+Ela contém os artefatos finais separados por finalidade: objeto de estudo, dados utilizados, treino/reforço, teste cego final, modelos treinados, resultados oficiais, arquivos do Orange, scripts de reprodução e evidências do relatório.
 
-- objeto de estudo;
-- dados usados no projeto;
-- dados de treino/reforço;
-- teste cego final Blind17;
-- modelos treinados;
-- resultados oficiais;
-- demonstração no Orange;
-- scripts de reprodução;
-- evidências do relatório.
+## Histórico bruto
+
+A pasta `legacy_project/` preserva a estrutura original do desenvolvimento. Ela mantém scripts, PCAPs, CSVs, datasets intermediários, resultados antigos e arquivos de experimentação. Essa pasta não deve ser usada como fonte principal do relatório, mas sim como rastreabilidade técnica.
+
+## Modelo final adotado
+
+Embora a proposta tenha passado por diferentes hipóteses de modelagem, o resultado oficial do projeto foi consolidado com Machine Learning aplicado sobre features extraídas pelo CICFlowMeter. O modelo V7 com Random Forest regularizado foi adotado como referência final por apresentar melhor adequação ao conjunto tabular avaliado.
 
 ## Classes avaliadas
 
